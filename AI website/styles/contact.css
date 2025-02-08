@@ -1,0 +1,120 @@
+main{
+    width: 95%;
+    margin: 2rem auto;
+}
+main h2, main p{
+    text-align: center;
+    margin-block: 1rem;
+}
+form{
+    /* border: 2px solid red; */
+    width: 80%;
+    max-width: 400px;
+    margin: auto;
+}
+form > *{
+    margin-block: 1.5rem;
+    display: block;
+}
+#personal-details input,textarea{
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-block: 1rem;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1.7rem;
+    font-family: inherit;
+    background-color: rgb(23, 23, 23);
+    color: white;
+}
+fieldset{
+    border: none;
+    border-radius: 5px;
+    /* padding */
+    /* padding-inline:1rem; */
+}
+legend{
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+    text-shadow: .5px .5px 2px black;
+}
+#choose-profession{
+    background-color: rgb(23, 23, 23);
+    color: white;
+    padding-block: 1rem;
+}
+#choose-profession label, input[type="radio"]{
+    cursor: pointer;
+}
+input[type="radio"]{
+    border-radius: 0px;
+}
+#choose-profession input{
+margin-inline: 2.5rem 1rem;
+}
+
+textarea{
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 150px;
+}
+
+button#submit-btn{
+    display: block;
+    margin: 3rem auto;
+    background-color: var(--btn-bg-color);
+    color: var(--txt-white);
+    border: none;
+    font-size: 1.7rem;
+    transition: all 100ms;
+}
+button#submit-btn:hover{
+    scale: 1.03;
+}
+#personal-details input, #choose-profession, textarea{
+    box-shadow: var(--box-shadow);
+}
+#overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.805);
+    backdrop-filter: blur(3px);
+    z-index: 500;
+}
+#popup{
+    z-index: 600;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: column;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 1/1;
+    background-color: #2a2a2a;
+    padding: 1rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    user-select: none;
+    transition: all 200ms;
+}
+#close-btn{
+    border: none;
+    background-color: rgb(180, 52, 52);
+    color: rgb(255, 255, 255);
+}
+
+input[type="radio"]{
+    margin-block: 1rem;
+}

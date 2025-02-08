@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kartik">
+    <meta name="description" content="whatai helps you to explore the world of artificial intelligence">
+    <title>WhatAI</title>
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/same.css">
+    <link rel="stylesheet" href="styles/contact.css">
+    <script src="scripts/contact.js" defer></script>
+</head>
+<body>
+    <header>
+        <div id="logo-and-heading">
+            <img src="images/logo2.png" alt="whatai logo" id="logo">
+            <h1 id="website-name">WhatAI</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li id="explore-link"><a href="/#explore">Explore</a></li>
+                <li id="faq-link"><a href="/#faqs">FAQs</a></li>
+                <li><a href="contact.html" id="a-btn" class="std-btn">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Fill up your details</h2>
+        <p>We will get back to you soon..</p>
+        <form>
+            <fieldset id="personal-details">
+                <legend>Personal Details</legend>
+                <input type="text" placeholder="Enter Name" autofocus autocomplete="off">
+                <input type="email" placeholder="Enter Email" autocomplete="off">
+                <input type="number" placeholder="Enter Number" autocomplete="off">
+            </fieldset>
+            <legend>Choose Profession</legend>
+            <fieldset id="choose-profession">
+                <div>
+                    <input type="radio" id="schooling" name="profession">
+                    <label for="schooling">Schooling</label>
+                </div>
+                <div>
+                    <input type="radio" id="college" name="profession">
+                    <label for="college">College</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="job" name="profession">
+                    <label for="job">Job</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="business" name="profession">
+                    <label for="business">Business</label>
+                </div>
+                <div>
+                    <input type="radio" id="other" name="profession">
+                    <label for="other">Other</label>
+                </div>
+            </fieldset>
+            <legend>Optional --</legend>
+            <textarea placeholder="How do you know about us ?"></textarea>
+            <button type="button" id="submit-btn" class="std-btn">Submit</button>
+        </form>
+        <div id="overlay"></div>
+        <div id="popup">
+            <p>We have received your details. Be patient, we will contact you soon.</p>
+            <button type="button" id="close-btn" class="std-btn">Close</button>
+        </div>
+    </main>
+    <a href="#" id="go-to-top"><img src="icons/gototop.png" alt="go to top"></a>
+    <footer>
+        <p>Created with <span style="color: red; font-size: 20px;">&hearts;</span> by <a href="https://www.linkedin.com/in/kartikkumar01/">Kartik Kumar</a></p>
+    </footer>
+</body>
+</html>

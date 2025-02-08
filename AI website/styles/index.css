@@ -1,0 +1,215 @@
+#hero{
+    height: 80vh;
+    background-image: url('../images/hero.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #000000a3;
+    background-blend-mode:darken;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding-inline: 1rem;
+}
+
+#hero-txt{
+    font-weight: bolder;
+    font-size: 9rem;
+    text-align: center;
+    text-shadow: var(--txt-shadow);
+}
+/* This code is taken from chatGPT ---START */
+#ai-txt {
+    transform: scale(1.5);
+    background: linear-gradient(45deg, #9a9eb3, #4271bd, #ff3131, #8a0000);
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textGradientAnimation 6s infinite ease-in-out;
+    text-shadow: none;
+}
+@keyframes textGradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+/* This code is taken from chatGPT ---END */
+
+#breathing-hero-txt{
+    font-size: 3rem;
+    animation: breathe 3s infinite ease-in-out;
+}
+#breathing-hero-txt:hover{
+    color: var(--a-hover-color);
+}
+
+@keyframes breathe {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.8; }
+}
+
+@media (width < 900px){
+    #hero-txt{
+        font-size:70px;
+    }
+    #breathing-hero-txt{
+        font-size: 20px;
+    }
+}
+
+@media (width < 600px){
+    #hero{
+        height: 60vh;
+    }
+    #hero-txt{
+        font-size:50px;
+    }
+    #breathing-hero-txt{
+        font-size: 17px;
+    }
+}
+
+@media (width < 360px){
+    #hero{
+        height: 50vh;
+    }
+    #hero-txt{
+        font-size:30px;
+    }
+}
+
+
+/* hero section ends here */
+
+
+#ai-tools{
+    text-align: center;
+    /* border: 1px solid white; */
+    margin-inline: 5px;
+}
+section{
+    margin-bottom: 30px;
+}
+section h2{
+    padding-top: 40px;
+}
+
+#faqs{
+    margin-block: 2rem;
+}
+.card img{
+    width: 100%;
+    border-radius:15px;
+}
+.card{
+    padding: 8px 5px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-flow: column wrap;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    transition: all 150ms;
+}
+.card:hover{
+    scale: 1.03;
+}
+.explore-btn{
+    background-color: var(--btn-bg-color);
+    border: none;
+    color: var(--txt-color);
+}
+.explore-btn a{
+    color: inherit;
+    text-decoration: none;
+}
+.explore-btn:hover{
+    background-color: green;
+}
+
+/* #card-container{
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+} */
+
+#card-container .row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin-block: 2.5rem;
+}
+/* cards section ends here */
+
+
+#faq-section h2{
+    text-align: center;
+    padding-inline: 5px;
+}
+
+details{
+    box-shadow: var(--box-shadow);
+    width: 90%;
+    max-width: 700px;
+    margin: auto;
+    cursor: pointer;
+    border-radius: var(--std-btn-border-radius);
+    transition: all 150ms;
+    margin-block: 1.5rem;
+}
+summary{
+    padding: 15px 15px;
+}
+details p{
+    padding-inline: 2rem;
+    padding-bottom: 1rem;
+    font-style: italic;
+    font-weight: 400;
+}
+details[open]{
+    font-weight: bolder;
+    background-color: rgba(23, 56, 106, 0.234);
+    scale: 1.02;
+}
+
+details:hover{
+    scale: 1.03;
+}
+
+#ai-videos{
+    width: 95%;
+    margin: auto;
+    padding-inline: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    flex-direction: column;
+}
+
+#ai-videos iframe{
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+}
+
+@media (width < 550px){
+    #ai-videos iframe{
+        height: 35vh;
+    }
+}
+
+@media (width < 410px){
+    #ai-videos iframe{
+        height: 30vh;
+    }
+}

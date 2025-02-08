@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    scroll-behavior: smooth;
+    --high-color : #1c1c1c;
+    --low-color: #333;
+    --text-color: #fff;
+    --btn-bg-color : #20a320a1;
+    --std-padding : 10px 25px;
+    --std-margin: 12px;
+    --std-btn-padding : 1rem 2rem;
+    --std-btn-border-radius : 8px;
+    --ai-gradient : linear-gradient(45deg, #9a9eb3, #4271bd, #ff3131, #8a0000);
+    --txt-shadow : 1px 1px 5px #000;
+    --box-shadow : 0 0 10px rgba(0, 255, 255, .5);
+    --a-hover-color : rgb(255, 255, 255);
+}
+.std-btn{
+    padding: var(--std-btn-padding);
+    border-radius: var(--std-btn-border-radius);
+    cursor: pointer;
+}
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--text-color);
+    background-color: var(--low-color);
+}
+
+header,
+footer {
+    background-color: var(--high-color);
+}
+
+header a {
+    color: var(--text-color);
+}
+
+header {
+    background-color: #1c1c1cb3;
+    display: flex;
+    justify-content: space-between;
+    padding: var(--std-padding);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backface-visibility: visible;
+    backdrop-filter: blur(3px);
+}
+
+#logo {
+    width: 45px;
+    aspect-ratio: 1/1;
+    border-radius: 50px;
+}
+
+/* This code is taken from chatGPT ---START*/
+#website-name {
+    /* font-weight: bold;
+    font-size: 40px; */
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #9a9eb3, #4271bd, #ff3131, #8a0000);
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textGradientAnimation 6s infinite ease-in-out;
+}
+@keyframes textGradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+/* This code is taken from chatGPT ---END*/
+
+#logo-and-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+nav{
+    display: flex;
+    align-items: center;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#a-btn{
+    display: block;
+    text-decoration: none;
+    background-color: var(--btn-bg-color);
+    transition: all 100ms;
+}
+#a-btn:hover{
+    scale: 1.03;
+}
+
+main{
+    min-height: 100px;
+}
+
+footer{
+    padding: 2.5rem;
+    text-align: center;
+}
+
+@media (width < 700px){
+    header{
+        flex-direction: column;
+    }
+    nav{
+        justify-content: center;
+    }
+}
+
+@media (width < 500px){
+    #explore-link, #faq-link{
+        display: none;
+    }
+}
+
+@media (width < 340px){
+    header{
+        padding: 0.5rem;
+    }
+    #a-btn{
+        padding: .5rem 1rem;
+    }
+    nav ul{
+        gap: 1rem;
+    }
+    #a-btn{
+        background: none;
+        padding: 0;
+    }
+    #a-btn:hover{
+        scale: 1;
+        text-decoration: underline;
+    }
+}
+
+#go-to-top{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    scale: .5;
+    box-shadow: var(--box-shadow);
+    border-radius: 50px;
+}

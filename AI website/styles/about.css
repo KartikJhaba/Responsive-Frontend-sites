@@ -1,0 +1,65 @@
+main{
+    width: 85%;
+    margin: auto;
+}
+
+.whatai {
+    font-weight: bold;
+    font-size: 10rem;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #9a9eb3, #4271bd, #ff3131, #8a0000);
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textGradientAnimation 6s infinite ease-in-out;
+}
+@keyframes textGradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+main ul, main p{
+    margin-left: 1rem;
+}
+@media (width < 400px){
+    .whatai{
+        font-size: 6rem;
+    }
+}
+
+.whatai-logo{
+    width: 100%;
+    margin-inline: auto;
+    margin-block: 20px;
+    max-width: 300px;
+}
+
+section li{
+    list-style-type: square;
+    margin-left: 3rem;
+}
+
+section > *{
+    margin-block: 1rem;
+    width: 100%;
+    max-width: 800px;
+    margin-inline:auto;
+}
+
+#start-explore-btn{
+    display: block;
+    border: none;
+    background: none;
+    margin: 5rem auto;
+}
+#start-explore-btn a:hover{
+    background-color: green;
+}
+#start-explore-btn a{
+    color: var(--text-color);
+    text-decoration: none;
+    background-color: var(--btn-bg-color);
+    font-weight: bold;
+}
