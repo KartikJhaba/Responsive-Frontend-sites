@@ -11,6 +11,7 @@ submitBtn.addEventListener('click', () => {
 });
 
 closeBtn.addEventListener('click', () => {
+    location.reload();
     overlay.style = "display : none";
     popup.style = "transform: translate(-50%, -50%) scale(0)";
 });
